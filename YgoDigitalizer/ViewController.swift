@@ -6,95 +6,88 @@
 //
 
 import UIKit
-import Vision
+
 
 class ViewController: UIViewController {
+
+    private lazy var scanButton: UIButton = .init()
+    private lazy var viewCollectionButton: UIButton = .init()
     
-    private let label: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.backgroundColor = .systemGray2
-        return label
-    }()
-    
-    private let imageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "Example1")
-        imageView.contentMode = .scaleAspectFit
-        return imageView
-    }()
+    let gradient = CAGradientLayer()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        view.addSubview(label)
-        view.addSubview(imageView)
+        title = "Main Menu"
         
-        label.translatesAutoresizingMaskIntoConstraints = false
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        
+        setupViews()
+        setupHierarchy()
         setupConstraints()
-        
-        recognizeText(image: imageView.image)
-    }
-
-    private func recognizeText(image: UIImage?) {
-        guard let cgImage = image?.cgImage else { return }
-        
-        // Handler
-        let handler = VNImageRequestHandler(cgImage: cgImage, options: [:])
-        
-        // Request
-        let request = VNRecognizeTextRequest { [weak self] request, error in
-            guard let observations = request.results as? [VNRecognizedTextObservation], error == nil else {
-                return
-            }
-
-            var foundText: String = ""
-            for recognized in observations {
-                guard let text = recognized.topCandidates(1).first?.string else { return }
-                if text.count == 10 && text.contains("-") {
-                    foundText = text
-                    print(text)
-                }
-                
-            }
-            
-//            let text = observations.compactMap({
-//                $0.topCandidates(1).first?.string
-//            }).joined(separator: "; ")
-
-            
-            DispatchQueue.main.async {
-                self?.label.text = foundText
-            }
-            
-        }
-        
-        // Process request
-        do {
-            try handler.perform([request])
-        } catch {
-            print(error)
-        }
     }
     
-    private func setupConstraints() {
-        let imageViewConstraints = [
-            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-            imageView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -40),
-            imageView.heightAnchor.constraint(equalTo: view.widthAnchor, constant: -40)
-        ]
-        NSLayoutConstraint.activate(imageViewConstraints)
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
+    func setupViews() {
+        gradient.frame = self.view.bounds
+        gradient.colors = [UIColor.systemGray5.cgColor, UIColor.systemGray6.cgColor]
         
-        let labelConstraints = [
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            label.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 100),
-            label.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -40),
-            label.heightAnchor.constraint(equalToConstant: 200)
+        self.view.layer.insertSublayer(gradient, at: 0)
+        
+        viewCollectionButton.translatesAutoresizingMaskIntoConstraints = false
+        viewCollectionButton.setTitle("View my collection", for: .normal)
+        viewCollectionButton.backgroundColor = .systemBlue
+        viewCollectionButton.setTitleColor(.white, for: .normal)
+        viewCollectionButton.layer.cornerRadius = 12
+        viewCollectionButton.addTarget(self,
+                                       action: #selector(viewCollectionTapped),
+                                       for: .touchUpInside)
+        
+        scanButton.translatesAutoresizingMaskIntoConstraints = false
+        scanButton.setTitle("Scan Card", for: .normal)
+        scanButton.backgroundColor = .systemBlue
+        scanButton.setTitleColor(.white, for: .normal)
+        scanButton.layer.cornerRadius = 12
+        scanButton.addTarget(self,
+                             action: #selector(scanTapped),
+                             for: .touchUpInside)
+    }
+
+    func setupHierarchy() {
+        view.addSubview(viewCollectionButton)
+        view.addSubview(scanButton)
+    }
+
+    func setupConstraints() {
+        let viewCollectionButtonConstraints = [
+            viewCollectionButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            viewCollectionButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -40),
+            viewCollectionButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -40),
+            viewCollectionButton.heightAnchor.constraint(equalToConstant: 50)
         ]
-        NSLayoutConstraint.activate(labelConstraints)
+        NSLayoutConstraint.activate(viewCollectionButtonConstraints)
+        
+        let scanButtonConstraints = [
+            scanButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            scanButton.topAnchor.constraint(equalTo: viewCollectionButton.bottomAnchor, constant: 40),
+            scanButton.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -40),
+            scanButton.heightAnchor.constraint(equalToConstant: 50)
+        ]
+        NSLayoutConstraint.activate(scanButtonConstraints)
+    }
+
+    @objc private func scanTapped() {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        let scanVC = ScanViewController()
+        navigationController?.pushViewController(scanVC, animated: true)
+    }
+    
+    @objc private func viewCollectionTapped() {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        let collectionVC = CollectionViewController()
+        navigationController?.pushViewController(collectionVC, animated: true)
     }
 }
+
 

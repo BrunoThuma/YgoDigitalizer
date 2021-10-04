@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E1ACF85270A500400A270CC /* IsNumericStringExtesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1ACF84270A500400A270CC /* IsNumericStringExtesion.swift */; };
+		5E79249227074D38003F0CB3 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E79249127074D38003F0CB3 /* ScanViewController.swift */; };
+		5E79249427076553003F0CB3 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E79249327076553003F0CB3 /* RoundedButton.swift */; };
 		5E7BA1FF2705EE550091382B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7BA1FE2705EE550091382B /* AppDelegate.swift */; };
 		5E7BA2012705EE550091382B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7BA2002705EE550091382B /* SceneDelegate.swift */; };
 		5E7BA2032705EE550091382B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7BA2022705EE550091382B /* ViewController.swift */; };
-		5E7BA2062705EE550091382B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7BA2042705EE550091382B /* Main.storyboard */; };
 		5E7BA2082705EE560091382B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7BA2072705EE560091382B /* Assets.xcassets */; };
-		5E7BA20B2705EE560091382B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E7BA2092705EE560091382B /* LaunchScreen.storyboard */; };
+		5EB620BB270AD05C00CC0D2F /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620BA270AD05C00CC0D2F /* CollectionViewController.swift */; };
+		5EB620BF270AD6EF00CC0D2F /* CardListAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620BE270AD6EF00CC0D2F /* CardListAdapter.swift */; };
+		5EB620C1270AD74D00CC0D2F /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620C0270AD74D00CC0D2F /* CardCell.swift */; };
+		5EB620C4270AE1BE00CC0D2F /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620C3270AE1BE00CC0D2F /* CardRepository.swift */; };
+		5EB620C7270AE24000CC0D2F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620C6270AE24000CC0D2F /* Card.swift */; };
+		5EB620C9270AE2C300CC0D2F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620C8270AE2C300CC0D2F /* Response.swift */; };
+		5EB620CB270AE2D600CC0D2F /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620CA270AE2D600CC0D2F /* Info.swift */; };
+		5EB620CE270AE32A00CC0D2F /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620CD270AE32A00CC0D2F /* CardService.swift */; };
+		5EB620D2270AE43F00CC0D2F /* FetchCardsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620D1270AE43F00CC0D2F /* FetchCardsUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E1ACF84270A500400A270CC /* IsNumericStringExtesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsNumericStringExtesion.swift; sourceTree = "<group>"; };
+		5E79249127074D38003F0CB3 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		5E79249327076553003F0CB3 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		5E7BA1FB2705EE550091382B /* YgoDigitalizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YgoDigitalizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7BA1FE2705EE550091382B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E7BA2002705EE550091382B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5E7BA2022705EE550091382B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5E7BA2052705EE550091382B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E7BA2072705EE560091382B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5E7BA20A2705EE560091382B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E7BA20C2705EE560091382B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EB620BA270AD05C00CC0D2F /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		5EB620BE270AD6EF00CC0D2F /* CardListAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListAdapter.swift; sourceTree = "<group>"; };
+		5EB620C0270AD74D00CC0D2F /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		5EB620C3270AE1BE00CC0D2F /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
+		5EB620C6270AE24000CC0D2F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		5EB620C8270AE2C300CC0D2F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		5EB620CA270AE2D600CC0D2F /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		5EB620CD270AE32A00CC0D2F /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
+		5EB620D1270AE43F00CC0D2F /* FetchCardsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCardsUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +57,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E79248E27074CF6003F0CB3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5EB620B8270AD02D00CC0D2F /* CollectionScene */,
+				5E79248F27074D01003F0CB3 /* ScanScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5E79248F27074D01003F0CB3 /* ScanScene */ = {
+			isa = PBXGroup;
+			children = (
+				5E79249027074D0B003F0CB3 /* ViewController */,
+			);
+			path = ScanScene;
+			sourceTree = "<group>";
+		};
+		5E79249027074D0B003F0CB3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5E79249127074D38003F0CB3 /* ScanViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		5E7BA1F22705EE550091382B = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +101,80 @@
 		5E7BA1FD2705EE550091382B /* YgoDigitalizer */ = {
 			isa = PBXGroup;
 			children = (
+				5E79248E27074CF6003F0CB3 /* Scenes */,
 				5E7BA1FE2705EE550091382B /* AppDelegate.swift */,
 				5E7BA2002705EE550091382B /* SceneDelegate.swift */,
 				5E7BA2022705EE550091382B /* ViewController.swift */,
-				5E7BA2042705EE550091382B /* Main.storyboard */,
+				5E79249327076553003F0CB3 /* RoundedButton.swift */,
+				5E1ACF84270A500400A270CC /* IsNumericStringExtesion.swift */,
 				5E7BA2072705EE560091382B /* Assets.xcassets */,
-				5E7BA2092705EE560091382B /* LaunchScreen.storyboard */,
 				5E7BA20C2705EE560091382B /* Info.plist */,
 			);
 			path = YgoDigitalizer;
+			sourceTree = "<group>";
+		};
+		5EB620B8270AD02D00CC0D2F /* CollectionScene */ = {
+			isa = PBXGroup;
+			children = (
+				5EB620CF270AE41600CC0D2F /* Domain */,
+				5EB620C2270AE1A600CC0D2F /* Data */,
+				5EB620B9270AD04300CC0D2F /* View */,
+			);
+			path = CollectionScene;
+			sourceTree = "<group>";
+		};
+		5EB620B9270AD04300CC0D2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5EB620BA270AD05C00CC0D2F /* CollectionViewController.swift */,
+				5EB620BE270AD6EF00CC0D2F /* CardListAdapter.swift */,
+				5EB620C0270AD74D00CC0D2F /* CardCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5EB620C2270AE1A600CC0D2F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5EB620C3270AE1BE00CC0D2F /* CardRepository.swift */,
+				5EB620C5270AE22500CC0D2F /* Model */,
+				5EB620CC270AE2F200CC0D2F /* Services */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5EB620C5270AE22500CC0D2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5EB620C6270AE24000CC0D2F /* Card.swift */,
+				5EB620C8270AE2C300CC0D2F /* Response.swift */,
+				5EB620CA270AE2D600CC0D2F /* Info.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5EB620CC270AE2F200CC0D2F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5EB620CD270AE32A00CC0D2F /* CardService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5EB620CF270AE41600CC0D2F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5EB620D0270AE42100CC0D2F /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5EB620D0270AE42100CC0D2F /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				5EB620D1270AE43F00CC0D2F /* FetchCardsUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E7BA20B2705EE560091382B /* LaunchScreen.storyboard in Resources */,
 				5E7BA2082705EE560091382B /* Assets.xcassets in Resources */,
-				5E7BA2062705EE550091382B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +246,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EB620D2270AE43F00CC0D2F /* FetchCardsUseCase.swift in Sources */,
 				5E7BA2032705EE550091382B /* ViewController.swift in Sources */,
+				5EB620CE270AE32A00CC0D2F /* CardService.swift in Sources */,
+				5E79249427076553003F0CB3 /* RoundedButton.swift in Sources */,
 				5E7BA1FF2705EE550091382B /* AppDelegate.swift in Sources */,
+				5EB620CB270AE2D600CC0D2F /* Info.swift in Sources */,
+				5E1ACF85270A500400A270CC /* IsNumericStringExtesion.swift in Sources */,
+				5EB620C9270AE2C300CC0D2F /* Response.swift in Sources */,
+				5EB620BB270AD05C00CC0D2F /* CollectionViewController.swift in Sources */,
 				5E7BA2012705EE550091382B /* SceneDelegate.swift in Sources */,
+				5E79249227074D38003F0CB3 /* ScanViewController.swift in Sources */,
+				5EB620C4270AE1BE00CC0D2F /* CardRepository.swift in Sources */,
+				5EB620BF270AD6EF00CC0D2F /* CardListAdapter.swift in Sources */,
+				5EB620C1270AD74D00CC0D2F /* CardCell.swift in Sources */,
+				5EB620C7270AE24000CC0D2F /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		5E7BA2042705EE550091382B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E7BA2052705EE550091382B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5E7BA2092705EE560091382B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E7BA20A2705EE560091382B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5E7BA20D2705EE560091382B /* Debug */ = {
@@ -294,7 +395,6 @@
 				INFOPLIST_FILE = YgoDigitalizer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +422,6 @@
 				INFOPLIST_FILE = YgoDigitalizer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
