@@ -1,10 +1,10 @@
 //
-//  Response.swift
+//  CardSet.swift
 //  YgoDigitalizer
 //
 //  Created by Bruno Thuma on 04/10/21.
 //
 
-struct Response: Decodable {
-    let data: [Card]
+struct CardSet: Decodable {
+    let set_code: String
 }

@@ -27,11 +27,13 @@ final class CardCell: UITableViewCell {
         hStack.addArrangedSubview(cardImageView)
         hStack.addArrangedSubview(nameLabel)
         
-        addSubview(hStack)
+//        addSubview(hStack)
+        addSubview(nameLabel)
+        addSubview(cardImageView)
         
         setupConstraints()
         
-        let url = URL(string: card.image_url)!
+        let url = URL(string: card.card_images[0].image_url)!
         
         let request = URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else { return }
@@ -45,12 +47,21 @@ final class CardCell: UITableViewCell {
     }
     
     private func setupConstraints() {
+        let nameLabelConstraints = [
+            nameLabel.centerXAnchor.constraint(equalTo: superview!.centerXAnchor),
+            nameLabel.topAnchor.constraint(equalTo: superview!.topAnchor),
+            nameLabel.trailingAnchor.constraint(equalTo: superview!.trailingAnchor),
+            nameLabel.leadingAnchor.constraint(equalTo: superview!.leadingAnchor)
+        ]
+        NSLayoutConstraint.activate(nameLabelConstraints)
+        
         let cardImageViewConstraints = [
-            cardImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            cardImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 100),
-            cardImageView.widthAnchor.constraint(equalTo: self.widthAnchor, constant: -40),
-            cardImageView.heightAnchor.constraint(equalTo: self.widthAnchor, constant: -40)
+            cardImageView.centerXAnchor.constraint(equalTo: superview!.centerXAnchor),
+            cardImageView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor),
+            cardImageView.widthAnchor.constraint(equalToConstant: 100),
+            cardImageView.heightAnchor.constraint(equalToConstant: 100)
         ]
         NSLayoutConstraint.activate(cardImageViewConstraints)
+        
     }
 }

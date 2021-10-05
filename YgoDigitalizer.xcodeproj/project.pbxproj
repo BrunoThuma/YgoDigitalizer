@@ -20,9 +20,10 @@
 		5EB620C4270AE1BE00CC0D2F /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620C3270AE1BE00CC0D2F /* CardRepository.swift */; };
 		5EB620C7270AE24000CC0D2F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620C6270AE24000CC0D2F /* Card.swift */; };
 		5EB620C9270AE2C300CC0D2F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620C8270AE2C300CC0D2F /* Response.swift */; };
-		5EB620CB270AE2D600CC0D2F /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620CA270AE2D600CC0D2F /* Info.swift */; };
+		5EB620CB270AE2D600CC0D2F /* CardImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620CA270AE2D600CC0D2F /* CardImages.swift */; };
 		5EB620CE270AE32A00CC0D2F /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620CD270AE32A00CC0D2F /* CardService.swift */; };
 		5EB620D2270AE43F00CC0D2F /* FetchCardsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB620D1270AE43F00CC0D2F /* FetchCardsUseCase.swift */; };
+		5ED113D0270B6831002BA82E /* CardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED113CF270B6831002BA82E /* CardSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,9 +42,10 @@
 		5EB620C3270AE1BE00CC0D2F /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRepository.swift; sourceTree = "<group>"; };
 		5EB620C6270AE24000CC0D2F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		5EB620C8270AE2C300CC0D2F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		5EB620CA270AE2D600CC0D2F /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		5EB620CA270AE2D600CC0D2F /* CardImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImages.swift; sourceTree = "<group>"; };
 		5EB620CD270AE32A00CC0D2F /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
 		5EB620D1270AE43F00CC0D2F /* FetchCardsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCardsUseCase.swift; sourceTree = "<group>"; };
+		5ED113CF270B6831002BA82E /* CardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +150,8 @@
 			children = (
 				5EB620C6270AE24000CC0D2F /* Card.swift */,
 				5EB620C8270AE2C300CC0D2F /* Response.swift */,
-				5EB620CA270AE2D600CC0D2F /* Info.swift */,
+				5EB620CA270AE2D600CC0D2F /* CardImages.swift */,
+				5ED113CF270B6831002BA82E /* CardSet.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -251,7 +254,7 @@
 				5EB620CE270AE32A00CC0D2F /* CardService.swift in Sources */,
 				5E79249427076553003F0CB3 /* RoundedButton.swift in Sources */,
 				5E7BA1FF2705EE550091382B /* AppDelegate.swift in Sources */,
-				5EB620CB270AE2D600CC0D2F /* Info.swift in Sources */,
+				5EB620CB270AE2D600CC0D2F /* CardImages.swift in Sources */,
 				5E1ACF85270A500400A270CC /* IsNumericStringExtesion.swift in Sources */,
 				5EB620C9270AE2C300CC0D2F /* Response.swift in Sources */,
 				5EB620BB270AD05C00CC0D2F /* CollectionViewController.swift in Sources */,
@@ -260,6 +263,7 @@
 				5EB620C4270AE1BE00CC0D2F /* CardRepository.swift in Sources */,
 				5EB620BF270AD6EF00CC0D2F /* CardListAdapter.swift in Sources */,
 				5EB620C1270AD74D00CC0D2F /* CardCell.swift in Sources */,
+				5ED113D0270B6831002BA82E /* CardSet.swift in Sources */,
 				5EB620C7270AE24000CC0D2F /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

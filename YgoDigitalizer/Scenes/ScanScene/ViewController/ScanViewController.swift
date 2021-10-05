@@ -12,8 +12,10 @@ import Vision
 
 class ScanViewController: UIViewController {
     
+    let gradient = CAGradientLayer()
+    
     private lazy var rescanButton: UIButton = .init()
-    private lazy var label: UILabel = .init()
+    private lazy var label: UITextField = .init()
     private lazy var imageView: UIImageView = .init()
 
     override func viewDidLoad() {
@@ -44,7 +46,7 @@ class ScanViewController: UIViewController {
                 
                 let splittedText = text.components(separatedBy: " ")
                 
-                if text.count >= 10 && splittedText[0].isNumeric {
+                if text.count >= 8 && splittedText[0].isNumeric {
                     foundText = splittedText[0]
                 }
                 else {
@@ -64,8 +66,14 @@ class ScanViewController: UIViewController {
         }
     }
     
-    private func setupViews() {        label.translatesAutoresizingMaskIntoConstraints = false
-        label.numberOfLines = 0
+    private func setupViews() {
+        gradient.frame = self.view.bounds
+        gradient.colors = [UIColor.systemGray5.cgColor, UIColor.systemGray6.cgColor]
+        
+        self.view.layer.insertSublayer(gradient, at: 0)
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+//        label.numberOfLines = 0
         label.textAlignment = .center
         label.backgroundColor = .systemGray2
         
@@ -126,6 +134,7 @@ extension ScanViewController: UINavigationControllerDelegate, UIImagePickerContr
         vc.sourceType = .camera
         vc.allowsEditing = true
         vc.delegate = self
+        vc.allowsEditing = false
         present(vc, animated: true)
     }
     

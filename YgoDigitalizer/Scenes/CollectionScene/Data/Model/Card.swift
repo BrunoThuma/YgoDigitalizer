@@ -6,6 +6,9 @@
 //
 
 struct Card: Decodable {
+    let id: Int
     let name: String
-    let image_url: String
+    let desc: String
+    let card_sets: [CardSet]
+    let card_images: [CardImages]
 }

@@ -9,7 +9,7 @@ final class FetchCardsUseCase {
     
     let repository = CardRepository()
     
-    func execute(id: String, completion: @escaping ([Card]) -> Void) {
+    func execute(id: String, completion: @escaping (Card) -> Void) {
         repository.fetchCards(id: id, completion: completion)
     }
 }

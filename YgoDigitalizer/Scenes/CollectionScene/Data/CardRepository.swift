@@ -12,15 +12,17 @@ final class CardRepository {
     
     let service = CardService()
     
-    func fetchCards(id: String, completion: @escaping ([Card]) -> Void) {
+    func fetchCards(id: String, completion: @escaping (Card) -> Void) {
         service.fetchCards(id: id) { data in
             let decoder = JSONDecoder()
             
             do {
                 let response = try decoder.decode(Response.self, from: data)
+                
                 DispatchQueue.main.async {
-                    completion(response.results)
+                    completion(response.data[0])
                 }
+                
             } catch let error {
                 print("CardRepository: deu ruim o decode", error)
             }

@@ -13,6 +13,7 @@ class CollectionViewController: UIViewController, UITableViewDelegate {
     
     let adapter = CardListAdapter()
     let fetchCardsUseCase = FetchCardsUseCase()
+
     let gradient = CAGradientLayer()
     
     override func viewDidLoad() {
@@ -21,12 +22,14 @@ class CollectionViewController: UIViewController, UITableViewDelegate {
         view.addSubview(cardsTableView)
         setupConstraints()
         setupAdapter()
-        loadData()
+        loadData(id: "89631139")
     }
     
-    func loadData() {
-        fetchCardsUseCase.execute(id: "89631139") { characters in
-            self.updateCards(using: characters)
+    func loadData(id: String) {
+        fetchCardsUseCase.execute(id: id) { card in
+            print("Nome: ",card.name)
+            print("Image URL: ", card.card_images[0].image_url)
+            self.updateCards(using: [card])
         }
     }
     
