@@ -13,14 +13,18 @@ final class CardListAdapter: NSObject, UITableViewDataSource {
     
     // Quantas linhas vai ter?
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cards.count
+        return cards.count
     }
     
     // Qual a celula para essa linha?
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let card = cards[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardCell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell",
+                                                 for: indexPath) as! CardCell
         cell.configure(using: card)
+        
         return cell
     }
 }

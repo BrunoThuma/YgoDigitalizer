@@ -16,21 +16,32 @@ class CollectionViewController: UIViewController, UITableViewDelegate {
 
     let gradient = CAGradientLayer()
     
+    var cardsCollection: [Card] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupViews()
+        
+        cardsTableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(cardsTableView)
+        
         setupConstraints()
         setupAdapter()
+        
         loadData(id: "89631139")
+        loadData(id: "60681103")
     }
     
     func loadData(id: String) {
         fetchCardsUseCase.execute(id: id) { card in
-            print("Nome: ",card.name)
-            print("Image URL: ", card.card_images[0].image_url)
-            self.updateCards(using: [card])
+            self.updateCollection(card: card)
         }
+    }
+    
+    func updateCollection(card: Card) {
+        cardsCollection += [card]
+        updateCards(using: cardsCollection)
     }
     
     func setupAdapter() {
@@ -43,13 +54,14 @@ class CollectionViewController: UIViewController, UITableViewDelegate {
     }
     
     private func setupViews() {
+        title = "My Collection"
+        
         gradient.frame = self.view.bounds
         gradient.colors = [UIColor.systemGray5.cgColor, UIColor.systemGray6.cgColor]
         
         self.view.layer.insertSublayer(gradient, at: 0)
         
-        cardsTableView.dataSource = adapter
-        cardsTableView.delegate = self
+        cardsTableView.register(CardCell.self, forCellReuseIdentifier: "CardCell")
     }
     
     private func setupConstraints() {
